@@ -9,7 +9,7 @@ import pandas as pd
 import io
 
 # Constants
-S3_BUCKET = "aws-bucket-etl-spotify-veb"
+S3_BUCKET = "spotify-etl-mudit"
 S3_PREFIX_ALBUM = "transformed_data/album_data/"
 S3_PREFIX_ARTIST = "transformed_data/artist_data/"
 S3_PREFIX_SONGS = "transformed_data/songs_data/"
@@ -246,7 +246,7 @@ def insert_into_postgres_songs(**context):
 
 # Define Airflow DAG
 default_args = {
-    'owner': 'Vaibhav Gupta',
+    'owner': 'Mudit Jain',
     'depends_on_past': False,
     'start_date': datetime(2024, 2, 17),
     'email_on_failure': True,
